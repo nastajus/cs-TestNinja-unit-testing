@@ -26,8 +26,7 @@ namespace TestNinja.UnitTests
         {
             //Arrange
             var reservation = new Reservation();
-            var user123 = new User();
-            user123.IsAdmin = false;
+            var user123 = new User { IsAdmin = false };
             reservation.MadeBy = user123;
 
             //Act
@@ -42,8 +41,7 @@ namespace TestNinja.UnitTests
         {
             //Arrange
             var reservation = new Reservation();
-            var user123 = new User();
-            user123.IsAdmin = false;
+            var user123 = new User { IsAdmin = false };
 
             //Act
             var result = reservation.CanBeCancelledBy(user123);
