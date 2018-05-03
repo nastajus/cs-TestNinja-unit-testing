@@ -20,11 +20,36 @@ namespace TestNinja.UnitTests
             Assert.IsTrue(result);
 
         }
-        public void CanBeCancelledBy_Scenario_ExpectedBehavior2()
+
+        [TestMethod]
+        public void CanBeCancelledBy_MadeByUser123_ReturnsTrue()
         {
+            //Arrange
+            var reservation = new Reservation();
+            var user123 = new User();
+            user123.IsAdmin = false;
+            reservation.MadeBy = user123;
+
+            //Act
+            var result = reservation.CanBeCancelledBy(user123);
+
+            //Assert
+            Assert.IsTrue(result);
         }
-        public void CanBeCancelledBy_Scenario_ExpectedBehavior3()
+
+        [TestMethod]
+        public void CanBeCancelledBy_Nobody_ReturnsFalse()
         {
+            //Arrange
+            var reservation = new Reservation();
+            var user123 = new User();
+            user123.IsAdmin = false;
+
+            //Act
+            var result = reservation.CanBeCancelledBy(user123);
+
+            //Assert
+            Assert.IsFalse(result);
         }
     }
 }
