@@ -1,14 +1,15 @@
-
 Unit Testing Tutorial for C# Developers
 https://www.youtube.com/watch?v=HYrXogLj7vg
+
+Purpose: Demonstrate Unit Testing with each MSTest and NUnit test in Visual Studio, using the NuGet package manager.
+
 
 #### C# Code 
 
 
 | Original Code            | Simplified Code                            |
 | ------------------------ | ------------------------------------------ |
-| `var user = new User();` |  `var user = new User { IsAdmin = false }` |
-| `user.IsAdmin = false;`  |                                            |
+| `var user = new User();`<br>`user.IsAdmin = false;` |  `var user = new User { IsAdmin = false }` |
 
 - `IDE0017	Test C# Object initialization can be simplified` - recommendation made by IDE.
 
@@ -18,6 +19,8 @@ https://www.youtube.com/watch?v=HYrXogLj7vg
 MSTest - https://en.wikipedia.org/wiki/Visual_Studio_Unit_Testing_Framework
 
 NuGet - https://en.wikipedia.org/wiki/NuGet
+
+TDD 
 
 #### Visual Studio Gotchas
 
